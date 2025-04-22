@@ -1,0 +1,6072 @@
+{
+	"info": {
+		"_postman_id": "101db21f-cf6b-4b73-98c1-d64d305ca83f",
+		"name": "Test validate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43277729"
+	},
+	"item": [
+		{
+			"name": "Валидация почты",
+			"item": [
+				{
+					"name": "Валидные почты",
+					"item": [
+						{
+							"name": "user@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_1.2-3@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user_1.2-3@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "имя_1.2-3@домен.рф",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "имя_1.2-3@домен.рф",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@mail.sub.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "имя_1.2-3@домен.рф",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "long.email.address@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "имя_1.2-3@домен.рф",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "u@d.ru",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "имя_1.2-3@домен.рф",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user+domain@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user+domain@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Запрещенные символы",
+					"item": [
+						{
+							"name": "use!r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use!r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use#r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use#r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use$r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use$r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use%r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use%r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use^r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use^r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use&r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use&r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use*r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use*r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use\\r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use\\r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use|r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use|r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use/r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use/r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use(r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use(r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use)r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use)r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use{r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use{r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use}r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use}r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use<r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use<r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use>r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use>r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use[r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use[r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use]r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use]r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use,r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use,r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use:r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use:r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use;r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use;r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use'r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use'r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use\"r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use\"r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use`r@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "use`r@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@do+main.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@do+main.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Наличие точки и @ в домене",
+					"item": [
+						{
+							"name": "user@domain",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userdomain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "userdomain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Длина",
+					"item": [
+						{
+							"name": "user6789012345678901234567890123456789012345678901234567890123@domain78901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890.ru1234567889012345678",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user6789012345678901234567890123456789012345678901234567890123@domain78901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890.ru123456788901234567890",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user6789012345678901234567890123456789012345678901234567890@domain.ru",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user567890123456789012345678901234567890123456789012345678901234567890@domain.ru",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "u@domain1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "u@domain12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890.ru",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@mail.a",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@mail.a",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.com.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.com.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@mail.com.a",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@mail.com.a",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Два и более спецсимвола подряд",
+					"item": [
+						{
+							"name": "user..name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user..name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user--name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user--name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user__name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user__name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user._name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user._name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user.-name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user.-name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user-_name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user-_name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user...name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user...name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user._-name@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user._-name@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my..domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my..domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my__domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my__domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my--domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my--domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my.-domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my.-domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my._domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my._domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my_-domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my_-domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my...domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my...domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@my._-domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@my._-domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Не должно начинаться или оканчиваться спецсимволами",
+					"item": [
+						{
+							"name": "-user@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "-user@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user-@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user-@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@-domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@-domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain-.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain-.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.-com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.-com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.com-",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.com-",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": ".user@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": ".user@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user.@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user.@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@.domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@.domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.com.",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.com.",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "_user@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "_user@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_@domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user_@domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@_domain.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@_domain.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain_.com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain_.com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain._com",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain._com",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user@domain.com_",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@domain.com_",
+											"description": "true true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/test-validate/email",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"test-validate",
+										"email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Валидация телефонов",
+			"item": [
+				{
+					"name": "Валидный +71234567890",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+71234567890",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +11234567890",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+11234567890",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +7123456789",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7123456789",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +712345678901",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+712345678901",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +7(123)456-78-90",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7(123)456-78-90",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +7 1234567890",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7 1234567890",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Валидация телефонов международного формата",
+			"item": [
+				{
+					"name": "Валидный +1234567",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+1234567",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Валидный +123456789012345",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+123456789012345",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +123456",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+123456",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +1234567890123456",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+1234567890123456",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +7 (123)45678901",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7 (123)45678901",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный +7 1234567890",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7 1234567890",
+									"description": "true true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/phone-international",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"phone-international"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Валидация даты",
+			"item": [
+				{
+					"name": "Валидный 2025-01-01",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2025-01-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Валидный 2025-12-31",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2025-12-31",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 20251-12-31",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "20251-12-31",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025-12-111",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2025-12-111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025-111-12",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2025-111-12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025.12.31",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2025.12.31",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 20251231",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "20251231",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/date",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"date"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Валидация времени",
+			"item": [
+				{
+					"name": "Валидный 00:00:00",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "00:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Валидный 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Валидный 13:33:02",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "13:33:02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 24:00:00",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "24:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 13:60:00",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "13:60:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 13:00:60",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "13:00:60",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 13:00:00T",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "13:00:00T",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 13 33|02",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "time",
+									"value": "13 33|02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/time",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"time"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Валидация даты время",
+			"item": [
+				{
+					"name": "Валидный 2025-01-01 00:00:00",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "2025-01-01 00:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Валидный 2025-12-31 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "2025-12-31 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025-02-31 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "2025-02-31 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025-01-00 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "2025-01-00 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 2025-01-01 24:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "2025-01-01 24:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 01.01.2025 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "01.01.2025 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 01-01-2025 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "01-01-2025 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не валидный 01 01 2025 23:59:59",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "datetime",
+									"value": "01 01 2025 23:59:59",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/test-validate/datetime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test-validate",
+								"datetime"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Callback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Name",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+71234567890",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "цук@wef.рф",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "31.12.2025",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "time",
+							"value": "23:55:10",
+							"type": "text"
+						},
+						{
+							"key": "datetime",
+							"value": "06.06.2020 12:30:30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/callback",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"callback"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://tests.test/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
