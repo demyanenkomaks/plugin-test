@@ -11,14 +11,6 @@ use Maksde\Support\Contracts\Validation\EmailValidate;
 class CallbackRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
-     */
-    public function authorize(): bool
-    {
-        return true;
-    }
-
-    /**
      * Get the validation rules that apply to the request.
      *
      * @return array<string, ValidationRule|array|string>
@@ -39,22 +31,9 @@ class CallbackRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
-    {
-        return [
-            '*.required' => 'Обязательно к заполнению.',
-            '*.max' => 'Не должно превышать 255 символов.',
-            '*.date_format' => 'Не верный формат.',
-            '*.regex' => 'Не верный формат.',
-            'email' => 'Не действительный.',
-            'list.array' => 'Поле "Список дат" должно быть массивом.',
-        ];
-    }
-
     protected function failedValidation(Validator $validator): void
     {
         throw new HttpResponseException(response()->json([
-            'message' => 'Validation error',
             'errors' => $validator->errors(),
         ], 422));
     }
