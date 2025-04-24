@@ -12,5 +12,3 @@ parameters:
         - database/
         - public/
         - routes/
-        - vendor/maksde/helpers/
-        - vendor/maksde/support/
