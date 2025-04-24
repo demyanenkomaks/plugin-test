@@ -18,13 +18,13 @@ class CallbackFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name(), // Имя пользователя
-            'phone' => $this->faker->optional()->phoneNumber, // Телефон (необязательное поле)
-            'email' => $this->faker->optional()->email, // Почта (необязательное поле)
-            'date' => $this->faker->optional()->date, // Дата (необязательное поле)
-            'time' => $this->faker->optional()->time, // Время (необязательное поле)
-            'datetime' => $this->faker->optional()->dateTime, // Дата и время (необязательное поле)
-            'list' => [ // Список дат (необязательное поле)
+            'name' => $this->faker->name(),
+            'phone' => $this->faker->optional()->phoneNumber,
+            'email' => $this->faker->optional()->email,
+            'date' => $this->faker->optional()->date,
+            'time' => $this->faker->optional()->time,
+            'datetime' => $this->faker->optional()->dateTime,
+            'list' => [
                 [
                     'date' => $this->faker->date,
                     'time' => $this->faker->time,
