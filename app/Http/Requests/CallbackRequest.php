@@ -31,7 +31,26 @@ class CallbackRequest extends FormRequest
         ];
     }
 
-    protected function failedValidation(Validator $validator): void
+    /**
+     * Get custom attributes for validator errors.
+     */
+    //    public function attributes()
+    //    {
+    //        return [
+    //            'name' => 'Имя',
+    //            'phone' => 'Номер телефона',
+    //            'email' => 'E-mail',
+    //            'date' => 'Дата',
+    //            'time' => 'Время',
+    //            'datetime' => 'Дата и время',
+    //            'list' => 'Список',
+    //            'list.*.date' => 'Дата',
+    //            'list.*.time' => 'Время',
+    //            'list.*.datetime' => 'Дата и время',
+    //        ];
+    //    }
+
+    protected function failedValidation(Validator $validator): array
     {
         throw new HttpResponseException(response()->json([
             'errors' => $validator->errors(),

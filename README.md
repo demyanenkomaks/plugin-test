@@ -1,4 +1,4 @@
-## Разработка ведеться
+## Разработка ведется
 
 | Service  | Version |
 |----------|---------|
@@ -15,7 +15,7 @@
 4. Устанавливаем пакеты Composer `composer install --no-dev`
 5. Генерируем ключ приложения `php artisan key:generate`
 6. Запускаем миграции `php artisan migrate`
-7. Создание симолический ссылок `php artisan storage:link`
+7. Создание символических ссылок `php artisan storage:link`
 8. Создание пользователя `php artisan make:filament-user`
 9. Готово!
 
@@ -28,7 +28,7 @@ composer cache // очищает и создает новый кеш для lara
 ```
 
 
-## Коллекция постман для проверки валидации:
+## Postman коллекция для проверки:
 
 ```
 Test_validate.postman_collection.json

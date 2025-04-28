@@ -15,10 +15,10 @@ class TestValidateController
             $validated = $request->validate([
                 'email' => ['required', new EmailValidate],
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 
@@ -33,10 +33,10 @@ class TestValidateController
             $validated = $request->validate([
                 'phone' => 'required|'.config('support.validate.format.phone'),
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 
@@ -51,10 +51,10 @@ class TestValidateController
             $validated = $request->validate([
                 'phone' => 'required|'.config('support.validate.format.phone_international'),
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 
@@ -69,10 +69,10 @@ class TestValidateController
             $validated = $request->validate([
                 'date' => 'required|'.config('support.validate.format.date'),
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 
@@ -87,10 +87,10 @@ class TestValidateController
             $validated = $request->validate([
                 'time' => 'required|'.config('support.validate.format.time'),
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 
@@ -105,10 +105,10 @@ class TestValidateController
             $validated = $request->validate([
                 'datetime' => 'required|'.config('support.validate.format.datetime'),
             ]);
-        } catch (ValidationException $exception) {
+        } catch (ValidationException $validationException) {
             return response()->json([
                 'message' => 'Ошибка при валидации формы',
-                'errors' => $exception->errors(),
+                'errors' => $validationException->errors(),
             ], 422);
         }
 

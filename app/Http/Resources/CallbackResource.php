@@ -29,27 +29,9 @@ class CallbackResource extends JsonResource
             'date' => TemporalFormat::date($this->date),
             'time' => TemporalFormat::time($this->time),
             'datetime' => TemporalFormat::datetime($this->datetime),
-            'list' => $this->formatList($this->list),
+            'list' => $this->list,
             'created_at' => TemporalFormat::datetime($this->created_at),
             'updated_at' => TemporalFormat::datetime($this->updated_at),
         ];
-    }
-
-    /**
-     * Форматирует список дат для вывода.
-     */
-    protected function formatList(?array $list): array
-    {
-        if (empty($list)) {
-            return [];
-        }
-
-        return collect($list)->map(function ($item) {
-            return [
-                'date' => ! empty($item['date']) ? TemporalFormat::date($item['date']) : null,
-                'time' => ! empty($item['time']) ? TemporalFormat::time($item['time'], config('app.timezone')) : null,
-                'datetime' => ! empty($item['datetime']) ? TemporalFormat::datetime($item['datetime'], config('app.timezone')) : null,
-            ];
-        })->toArray();
     }
 }

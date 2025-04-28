@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Maksde\Support\Formation\TemporalFormat;
 
 /**
  * @property int $id Идентификатор записи
@@ -38,34 +40,51 @@ class Callback extends Model
     ];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
+     * Мутатор для поля list.
      */
-    protected $casts = [
-        'date' => 'date',
-        'datetime' => 'datetime',
-        'list' => 'array',
-    ];
+    protected function list(): Attribute
+    {
+        return Attribute::make(
+            get: static function ($value) {
+                if (empty($value)) {
+                    return null;
+                }
+
+                return collect(json_decode($value, false, 512, JSON_THROW_ON_ERROR))->map(function ($item) {
+                    return [
+                        'date' => TemporalFormat::date($item->date),
+                        'time' => TemporalFormat::time($item->time),
+                        'datetime' => TemporalFormat::datetime($item->datetime),
+                    ];
+                })->all();
+            },
+            set: static function ($value) {
+                if (is_array($value)) {
+                    return json_encode(array_map(static function ($item) {
+                        return [
+                            'date' => TemporalFormat::date($item['date'] ?? null),
+                            'time' => TemporalFormat::time($item['time'] ?? null),
+                            'datetime' => TemporalFormat::format($item['datetime'] ?? null, 'Y-m-d H:i:s', config('app.timezone')),
+                        ];
+                    }, $value), JSON_THROW_ON_ERROR);
+                }
+
+                return null;
+            }
+        );
+    }
 
     /**
-     * Мутатор для поля list.
+     * The attributes that should be cast.
      *
-     * @param  array|null  $value
-     * @return void
+     * @return array<string, string>
      */
-    public function setListAttribute($value)
+    protected function casts(): array
     {
-        if (is_array($value)) {
-            $this->attributes['list'] = json_encode(array_map(static function ($item) {
-                return [
-                    'date' => ! empty($item['date']) ? Carbon::parse($item['date'])->format('Y-m-d') : null,
-                    'time' => ! empty($item['time']) ? Carbon::parse($item['time'])->format('H:i:s') : null,
-                    'datetime' => ! empty($item['datetime']) ? Carbon::parse($item['datetime'])->setTimezone('UTC')->toDateTimeString() : null,
-                ];
-            }, $value), JSON_THROW_ON_ERROR);
-        } else {
-            $this->attributes['list'] = null;
-        }
+        return [
+            'date' => 'date',
+            'datetime' => 'datetime',
+            'list' => 'array',
+        ];
     }
 }

@@ -9,6 +9,9 @@ parameters:
         - app/
         - bootstrap/
         - config/
+        - lang/
         - database/
         - public/
+        - resources/
         - routes/
+        - tests/

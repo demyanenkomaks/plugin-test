@@ -18,22 +18,22 @@ class CallbackFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name(),
-            'phone' => $this->faker->optional()->phoneNumber,
-            'email' => $this->faker->optional()->email,
-            'date' => $this->faker->optional()->date,
-            'time' => $this->faker->optional()->time,
-            'datetime' => $this->faker->optional()->dateTime,
+            'name' => fake()->name(),
+            'phone' => fake()->optional()->phoneNumber,
+            'email' => fake()->optional()->email,
+            'date' => fake()->optional()->date,
+            'time' => fake()->optional()->time,
+            'datetime' => fake()->optional()->dateTime,
             'list' => [
                 [
-                    'date' => $this->faker->date,
-                    'time' => $this->faker->time,
-                    'datetime' => $this->faker->dateTime,
+                    'date' => fake()->date,
+                    'time' => fake()->time,
+                    'datetime' => fake()->dateTime,
                 ],
                 [
-                    'date' => $this->faker->date,
-                    'time' => $this->faker->time,
-                    'datetime' => $this->faker->dateTime,
+                    'date' => fake()->date,
+                    'time' => fake()->time,
+                    'datetime' => fake()->dateTime,
                 ],
             ],
         ];

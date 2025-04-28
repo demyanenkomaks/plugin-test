@@ -14,9 +14,6 @@ class CallbackController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return AnonymousResourceCollection
      */
     public function index(Request $request): AnonymousResourceCollection
     {
@@ -27,40 +24,30 @@ class CallbackController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param CallbackRequest $request
-     * @return CallbackResource
      */
     public function store(CallbackRequest $request): CallbackResource
     {
-        $callback = Callback::create($request->validated());
+        $callback = Callback::query()->create($request->validated());
 
         return new CallbackResource($callback);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return CallbackResource
      */
     public function show(int $id): CallbackResource
     {
-        $callback = Callback::findOrFail($id);
+        $callback = Callback::query()->findOrFail($id);
 
         return new CallbackResource($callback);
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param CallbackRequest $request
-     * @param  int  $id
-     * @return CallbackResource
      */
     public function update(CallbackRequest $request, int $id): CallbackResource
     {
-        $callback = Callback::findOrFail($id);
+        $callback = Callback::query()->findOrFail($id);
 
         $callback->update($request->validated());
 
@@ -69,13 +56,10 @@ class CallbackController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return JsonResponse
      */
     public function destroy(int $id): JsonResponse
     {
-        $callback = Callback::findOrFail($id);
+        $callback = Callback::query()->findOrFail($id);
 
         $callback->delete();
 
