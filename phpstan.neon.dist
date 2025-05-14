@@ -15,3 +15,5 @@ parameters:
         - resources/
         - routes/
         - tests/
+#        - vendor/maksde/helpers
+#        - vendor/maksde/support

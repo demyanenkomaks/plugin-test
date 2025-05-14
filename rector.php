@@ -16,6 +16,11 @@ return RectorConfig::configure()
         __DIR__.'/resources',
         __DIR__.'/routes',
         __DIR__.'/tests',
+        //        __DIR__.'/vendor/maksde/helpers',
+        //        __DIR__.'/vendor/maksde/support',
+    ])
+    ->withSkip([
+        __DIR__.'/bootstrap/cache',
     ])
     ->withSets([
         LaravelLevelSetList::UP_TO_LARAVEL_120,
