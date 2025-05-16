@@ -13,6 +13,8 @@ use Maksde\Support\Formation\TemporalFormat;
  * @property string $name Имя пользователя (max: 255)
  * @property string|null $phone Телефон пользователя (max: 255)
  * @property string|null $email Адрес электронной почты
+ * @property string|null $text Текст
+ * @property string|null $html Html
  * @property Carbon|null $date Дата
  * @property string|null $time Время
  * @property Carbon|null $datetime Дата и время
@@ -33,6 +35,8 @@ class Callback extends Model
         'name',
         'phone',
         'email',
+        'text',
+        'html',
         'date',
         'time',
         'datetime',

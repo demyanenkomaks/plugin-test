@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name', 255); // Обязательное поле
             $table->string('phone', 255)->nullable(); // Необязательное поле
             $table->string('email')->nullable(); // Необязательное поле
+            $table->text('text')->nullable(); // Необязательное поле
+            $table->text('html')->nullable(); // Необязательное поле
             $table->date('date')->nullable(); // Необязательное поле
             $table->time('time')->nullable(); // Необязательное поле
             $table->timestamp('datetime')->nullable(); // Необязательное поле

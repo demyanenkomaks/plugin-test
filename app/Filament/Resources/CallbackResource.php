@@ -9,13 +9,10 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Maksde\Helpers\Filament\Forms\Components\CreateUpdatePlaceholders;
-use Maksde\Helpers\Filament\Forms\Components\DateForm;
-use Maksde\Helpers\Filament\Forms\Components\DateTimeForm;
-use Maksde\Helpers\Filament\Forms\Components\PhoneForm;
-use Maksde\Helpers\Filament\Forms\Components\TimeForm;
+use Maksde\Helpers\Filament\Forms\Components;
 use Maksde\Helpers\Filament\Tables\Columns;
 use Maksde\Helpers\Filament\Tables\Filters\CreateUpdateFilters;
+use Maksde\Support\Contracts\Validation\EmailValidate;
 
 class CallbackResource extends Resource
 {
@@ -35,34 +32,35 @@ class CallbackResource extends Resource
     {
         return $form
             ->schema([
-                ...CreateUpdatePlaceholders::make(),
+                ...Components\CreateUpdatePlaceholders::make(),
 
-                Forms\Components\TextInput::make('name')
-                    ->label('Имя')
-                    ->required()
-                    ->maxLength(255),
+                Components\StringCharCount::make('name', 'Имя')
+                    ->required(),
 
-                PhoneForm::make('phone', 'Телефон'),
+                Components\StringCharCount::make('email', 'Почта')
+                    ->rules([new EmailValidate]),
 
-                Forms\Components\TextInput::make('email')
-                    ->label('Почта')
-                    ->maxLength(255)
-                    ->rules(['email:filter']),
+                Components\PhoneForm::make('phone', 'Телефон'),
 
-                DateForm::make('date', 'Дата'),
+                Components\DateForm::make('date', 'Дата'),
 
-                TimeForm::make('time', 'Время'),
+                Components\TimeForm::make('time', 'Время'),
 
-                DateTimeForm::make('datetime', 'Дата и время'),
+                Components\DateTimeForm::make('datetime', 'Дата и время'),
+
+                Components\TextCharCount::make('text', 'Текст')
+                    ->rows(10),
+
+                Components\HtmlCharCount::make('html', 'Html'),
 
                 Forms\Components\Repeater::make('list')
                     ->label('Список дат')
                     ->schema([
-                        DateForm::make('date', 'Дата'),
+                        Components\DateForm::make('date', 'Дата'),
 
-                        TimeForm::make('time', 'Время'),
+                        Components\TimeForm::make('time', 'Время'),
 
-                        DateTimeForm::make('datetime', 'Дата и время'),
+                        Components\DateTimeForm::make('datetime', 'Дата и время'),
                     ])
                     ->columnSpan('full')
                     ->columns(3)

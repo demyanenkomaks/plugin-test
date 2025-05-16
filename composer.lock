@@ -3145,21 +3145,22 @@
         },
         {
             "name": "maksde/helpers",
-            "version": "4.1.1",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/demyanenkomaks/helpers.git",
-                "reference": "4e2fa1bc45b9b968b8c178cef9c499f915d52211"
+                "reference": "7d640241ebcd0199819eea99e47695425bbd0534"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/demyanenkomaks/helpers/zipball/4e2fa1bc45b9b968b8c178cef9c499f915d52211",
-                "reference": "4e2fa1bc45b9b968b8c178cef9c499f915d52211",
+                "url": "https://api.github.com/repos/demyanenkomaks/helpers/zipball/7d640241ebcd0199819eea99e47695425bbd0534",
+                "reference": "7d640241ebcd0199819eea99e47695425bbd0534",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^3.0",
-                "php": "^8.2"
+                "php": "^8.2",
+                "schmeits/filament-character-counter": "^1.3"
             },
             "type": "library",
             "extra": {
@@ -3184,25 +3185,25 @@
                     "email": "demyanenkomaks0@gmail.com"
                 }
             ],
-            "description": "Helpers for Filament",
+            "description": "Шаблоны для Resource FilamentPhp которые помогут сократить код для базово используемых компонентов форм, таблиц и фильтров таблиц.",
             "support": {
                 "issues": "https://github.com/demyanenkomaks/helpers/issues",
-                "source": "https://github.com/demyanenkomaks/helpers/tree/v4.1.1"
+                "source": "https://github.com/demyanenkomaks/helpers/tree/v4.2.0"
             },
-            "time": "2025-05-14T11:15:01+00:00"
+            "time": "2025-05-16T10:55:41+00:00"
         },
         {
             "name": "maksde/support",
-            "version": "1.0.2",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/demyanenkomaks/support.git",
-                "reference": "8afa1b71b2199d68defb1e794fbab5b838ff0ba1"
+                "reference": "fea1aeb2626f45c38393b5330c68cae1ee1fd432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/demyanenkomaks/support/zipball/8afa1b71b2199d68defb1e794fbab5b838ff0ba1",
-                "reference": "8afa1b71b2199d68defb1e794fbab5b838ff0ba1",
+                "url": "https://api.github.com/repos/demyanenkomaks/support/zipball/fea1aeb2626f45c38393b5330c68cae1ee1fd432",
+                "reference": "fea1aeb2626f45c38393b5330c68cae1ee1fd432",
                 "shasum": ""
             },
             "require": {
@@ -3235,12 +3236,12 @@
                     "email": "demyanenkomaks0@gmail.com"
                 }
             ],
-            "description": "Helpers for Laravel",
+            "description": "Помощник для Laravel",
             "support": {
                 "issues": "https://github.com/demyanenkomaks/support/issues",
-                "source": "https://github.com/demyanenkomaks/support/tree/v1.0.2"
+                "source": "https://github.com/demyanenkomaks/support/tree/v1.0.6"
             },
-            "time": "2025-05-14T11:43:55+00:00"
+            "time": "2025-05-15T07:29:27+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -4808,6 +4809,88 @@
                 }
             ],
             "time": "2025-02-25T09:09:36+00:00"
+        },
+        {
+            "name": "schmeits/filament-character-counter",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmeits/filament-character-counter.git",
+                "reference": "f3818eae0aa755de4c141cb4abd25ff14bec332e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmeits/filament-character-counter/zipball/f3818eae0aa755de4c141cb4abd25ff14bec332e",
+                "reference": "f3818eae0aa755de4c141cb4abd25ff14bec332e",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.2",
+                "filament/forms": "^3.2",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.16.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.10",
+                "nunomaduro/larastan": "^2.9",
+                "orchestra/testbench": "^v8.22",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-arch": "^2.7",
+                "pestphp/pest-plugin-laravel": "^2.3",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "spatie/laravel-ray": "^1.36"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "FilamentCharacterCounter": "Schmeits\\FilamentCharacterCounter\\Facades\\FilamentCharacterCounter"
+                    },
+                    "providers": [
+                        "Schmeits\\FilamentCharacterCounter\\FilamentCharacterCounterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Schmeits\\FilamentCharacterCounter\\": "src/",
+                    "Schmeits\\FilamentCharacterCounter\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tally Schmeits",
+                    "email": "tally@schmeits.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a Filament character counter TextField and Textarea form field for Filament v3.2",
+            "homepage": "https://github.com/schmeits/filament-character-counter",
+            "keywords": [
+                "filament",
+                "filament-character-counter",
+                "filament-plugin",
+                "laravel",
+                "schmeits"
+            ],
+            "support": {
+                "issues": "https://github.com/schmeits/filament-character-counter/issues",
+                "source": "https://github.com/schmeits/filament-character-counter"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/schmeits",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-26T10:03:58+00:00"
         },
         {
             "name": "spatie/color",
@@ -7561,16 +7644,16 @@
     "packages-dev": [
         {
             "name": "driftingly/rector-laravel",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/driftingly/rector-laravel.git",
-                "reference": "68c23d123bd80777536ce460936748d135bd6982"
+                "reference": "ac61de4f267c23249d175d7fc9149fd01528567d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/driftingly/rector-laravel/zipball/68c23d123bd80777536ce460936748d135bd6982",
-                "reference": "68c23d123bd80777536ce460936748d135bd6982",
+                "url": "https://api.github.com/repos/driftingly/rector-laravel/zipball/ac61de4f267c23249d175d7fc9149fd01528567d",
+                "reference": "ac61de4f267c23249d175d7fc9149fd01528567d",
                 "shasum": ""
             },
             "require": {
@@ -7590,9 +7673,9 @@
             "description": "Rector upgrades rules for Laravel Framework",
             "support": {
                 "issues": "https://github.com/driftingly/rector-laravel/issues",
-                "source": "https://github.com/driftingly/rector-laravel/tree/2.0.4"
+                "source": "https://github.com/driftingly/rector-laravel/tree/2.0.5"
             },
-            "time": "2025-04-13T14:43:39+00:00"
+            "time": "2025-05-14T17:30:41+00:00"
         },
         {
             "name": "fakerphp/faker",
@@ -8478,16 +8561,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.15",
+            "version": "2.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "402d11c1aa40ae2e1c3a512e6a4edb957527b20b"
+                "reference": "b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/402d11c1aa40ae2e1c3a512e6a4edb957527b20b",
-                "reference": "402d11c1aa40ae2e1c3a512e6a4edb957527b20b",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9",
+                "reference": "b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9",
                 "shasum": ""
             },
             "require": {
@@ -8532,7 +8615,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-14T11:16:08+00:00"
+            "time": "2025-05-16T09:40:10+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9031,12 +9114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "5326c903c04c522c27d45dacfb6a521a448a399a"
+                "reference": "98ed8a7be061968455a548ceb0ba2790b11b119f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5326c903c04c522c27d45dacfb6a521a448a399a",
-                "reference": "5326c903c04c522c27d45dacfb6a521a448a399a",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/98ed8a7be061968455a548ceb0ba2790b11b119f",
+                "reference": "98ed8a7be061968455a548ceb0ba2790b11b119f",
                 "shasum": ""
             },
             "conflict": {
@@ -9531,7 +9614,7 @@
                 "oro/customer-portal": ">=4.1,<=4.1.13|>=4.2,<=4.2.10|>=5,<=5.0.11|>=5.1,<=5.1.3",
                 "oro/platform": ">=1.7,<1.7.4|>=3.1,<3.1.29|>=4.1,<4.1.17|>=4.2,<=4.2.10|>=5,<=5.0.12|>=5.1,<=5.1.3",
                 "oveleon/contao-cookiebar": "<1.16.3|>=2,<2.1.3",
-                "oxid-esales/oxideshop-ce": "<4.5",
+                "oxid-esales/oxideshop-ce": "<=7.0.5",
                 "oxid-esales/paymorrow-module": ">=1,<1.0.2|>=2,<2.0.1",
                 "packbackbooks/lti-1-3-php-library": "<5",
                 "padraic/humbug_get_contents": "<1.1.2",
@@ -9704,7 +9787,7 @@
                 "subhh/libconnect": "<7.0.8|>=8,<8.1",
                 "sukohi/surpass": "<1",
                 "sulu/form-bundle": ">=2,<2.5.3",
-                "sulu/sulu": "<1.6.44|>=2,<2.5.21|>=2.6,<2.6.5",
+                "sulu/sulu": "<1.6.44|>=2,<2.5.25|>=2.6,<2.6.9|>=3.0.0.0-alpha1,<3.0.0.0-alpha3",
                 "sumocoders/framework-user-bundle": "<1.4",
                 "superbig/craft-audit": "<3.0.2",
                 "svewap/a21glossary": "<=0.4.10",
@@ -9954,7 +10037,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-13T20:06:05+00:00"
+            "time": "2025-05-15T17:04:55+00:00"
         },
         {
             "name": "sebastian/cli-parser",
