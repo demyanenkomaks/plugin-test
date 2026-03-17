@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\CallbackResource\Pages;
+namespace App\Filament\Resources\Callbacks\Pages;
 
-use App\Filament\Resources\CallbackResource;
+use App\Filament\Resources\Callbacks\CallbackResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 

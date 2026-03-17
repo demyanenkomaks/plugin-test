@@ -6,7 +6,12 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Maksde\Support\Contracts\Validation\DateTimeValidate;
+use Maksde\Support\Contracts\Validation\DateValidate;
 use Maksde\Support\Contracts\Validation\EmailValidate;
+use Maksde\Support\Contracts\Validation\NameValidate;
+use Maksde\Support\Contracts\Validation\PhoneValidate;
+use Maksde\Support\Contracts\Validation\TimeValidate;
 
 class CallbackRequest extends FormRequest
 {
@@ -18,16 +23,16 @@ class CallbackRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'phone' => ['nullable', config('support.validate.format.phone')],
+            'name' => ['required', new NameValidate],
+            'phone' => ['nullable', new PhoneValidate],
             'email' => ['nullable', new EmailValidate],
-            'date' => ['nullable', config('support.validate.format.date')],
-            'time' => ['nullable', config('support.validate.format.time')],
-            'datetime' => ['nullable', config('support.validate.format.datetime')],
+            'date' => ['nullable', new DateValidate],
+            'time' => ['nullable', new TimeValidate],
+            'datetime' => ['nullable', new DateTimeValidate],
             'list' => ['nullable', 'array'],
-            'list.*.date' => ['nullable', config('support.validate.format.date')],
-            'list.*.time' => ['nullable', config('support.validate.format.time')],
-            'list.*.datetime' => ['nullable', config('support.validate.format.datetime')],
+            'list.*.date' => ['nullable', new DateValidate],
+            'list.*.time' => ['nullable', new TimeValidate],
+            'list.*.datetime' => ['nullable', new DateTimeValidate],
         ];
     }
 

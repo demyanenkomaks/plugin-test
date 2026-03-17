@@ -8,15 +8,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use Maksde\Support\Formation\TemporalFormat;
 
 /**
- * Resource для форматирования данных сущности "Обратная связь".
- *
  * @mixin Callback
  */
 class CallbackResource extends JsonResource
 {
     /**
-     * Transform the resource into an array.
-     *
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array
@@ -26,12 +22,31 @@ class CallbackResource extends JsonResource
             'name' => $this->name,
             'phone' => $this->phone,
             'email' => $this->email,
-            'date' => TemporalFormat::date($this->date),
-            'time' => TemporalFormat::time($this->time),
-            'datetime' => TemporalFormat::datetime($this->datetime),
-            'list' => $this->list,
-            'created_at' => TemporalFormat::datetime($this->created_at),
-            'updated_at' => TemporalFormat::datetime($this->updated_at),
+            'date' => TemporalFormat::forOutput($this->date, 'date'),
+            'time' => TemporalFormat::forOutput($this->time, 'time'),
+            'datetime' => TemporalFormat::forOutput($this->datetime, 'datetime'),
+            'list' => $this->formatListForApi($this->list),
+            'created_at' => TemporalFormat::forOutput($this->created_at, 'datetime'),
+            'updated_at' => TemporalFormat::forOutput($this->updated_at, 'datetime'),
         ];
+    }
+
+    /**
+     * @param  array<int, array{date?: string|null, time?: string|null, datetime?: string|null}>|null  $list
+     * @return array<int, array{date: string|null, time: string|null, datetime: string|null}>|null
+     */
+    private function formatListForApi(?array $list): ?array
+    {
+        if (! is_array($list)) {
+            return null;
+        }
+
+        return array_map(function ($item) {
+            return [
+                'date' => TemporalFormat::forOutput($item['date'] ?? null, 'date'),
+                'time' => TemporalFormat::forOutput($item['time'] ?? null, 'time'),
+                'datetime' => TemporalFormat::forOutput($item['datetime'] ?? null, 'datetime'),
+            ];
+        }, $list);
     }
 }

@@ -1,28 +1,27 @@
-## Разработка ведется
+# Проект для тестирования плагинов
 
-| Service  | Version |
-|----------|---------|
-| mysql    | 8.0.27  |
-| php      | 8.3     |
-| laravel  | 12      |
-| filament | 3       |
+Тестовый Laravel-проект для проверки пакетов **maksde/helpers** и **maksde/support** (Filament-формы, валидация, дата/время).
 
-## Разворачивание проекта
+## Стек
 
-1. Клонируем проект `git clone ...`
-2. Копируем `.env.example` в `.env`
-3. Указываем настройки в файле `.env` описание смотреть `.env.example`
-4. Устанавливаем пакеты Composer `composer install --no-dev`
-5. Генерируем ключ приложения `php artisan key:generate`
-6. Запускаем миграции `php artisan migrate`
-7. Создание символических ссылок `php artisan storage:link`
-8. Создание пользователя `php artisan make:filament-user`
-9. Готово!
+| Сервис / пакет | Версия |
+|----------------|--------|
+| PHP            | 8.4    |
+| Laravel        | 12     |
+| Filament       | 5      |
+| MySQL          | 9.6.0  |
 
-## В случае возникновения ошибок с кешом:
 
-```bash
-composer cache:clear // очищает кеш для laravel и filament
+## Разворачивание
+
+1. Клонировать репозиторий: `git clone ...`
+2. Скопировать `.env.example` в `.env`
+3. Заполнить переменные в `.env` (подсказки — в `.env.example`)
+4. Установить зависимости: `composer install`
+5. Сгенерировать ключ: `php artisan key:generate`
+6. Выполнить миграции: `php artisan migrate`
+7. Создать символическую ссылку хранилища: `php artisan storage:link`
+8. Создать пользователя Filament: `php artisan make:filament-user`
 
 composer cache // очищает и создает новый кеш для laravel и filament
 ```

@@ -26,11 +26,6 @@ class Callback extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
     protected $fillable = [
         'name',
         'phone',
@@ -48,47 +43,48 @@ class Callback extends Model
      */
     protected function list(): Attribute
     {
+        $appTz = config('app.timezone');
+
         return Attribute::make(
-            get: static function ($value) {
+            get: static function (?string $value) use ($appTz): ?array {
                 if (empty($value)) {
                     return null;
                 }
 
-                return collect(json_decode($value, false, 512, JSON_THROW_ON_ERROR))->map(function ($item) {
-                    return [
-                        'date' => TemporalFormat::date($item->date),
-                        'time' => TemporalFormat::time($item->time),
-                        'datetime' => TemporalFormat::datetime($item->datetime),
-                    ];
-                })->all();
-            },
-            set: static function ($value) {
-                if (is_array($value)) {
-                    return json_encode(array_map(static function ($item) {
-                        return [
-                            'date' => TemporalFormat::date($item['date'] ?? null),
-                            'time' => TemporalFormat::time($item['time'] ?? null),
-                            'datetime' => TemporalFormat::format($item['datetime'] ?? null, 'Y-m-d H:i:s', config('app.timezone')),
-                        ];
-                    }, $value), JSON_THROW_ON_ERROR);
+                $raw = json_decode($value, true, 512, JSON_THROW_ON_ERROR);
+                if (! is_array($raw)) {
+                    return null;
                 }
 
-                return null;
+                return array_map(static function ($item) use ($appTz) {
+                    return [
+                        'date' => $item['date'] ?? null,
+                        'time' => TemporalFormat::forOutput($item['time'] ?? null, 'time', $appTz, 'H:i'),
+                        'datetime' => TemporalFormat::forOutput($item['datetime'] ?? null, 'datetime', $appTz, 'Y-m-d H:i:s'),
+                    ];
+                }, $raw);
+            },
+            set: static function ($value) use ($appTz) {
+                if (! is_array($value)) {
+                    return null;
+                }
+
+                return json_encode(array_map(static function ($item) use ($appTz) {
+                    return [
+                        'date' => TemporalFormat::forStorage($item['date'] ?? null, 'date', $appTz),
+                        'time' => TemporalFormat::forStorage($item['time'] ?? null, 'time', $appTz),
+                        'datetime' => TemporalFormat::forStorage($item['datetime'] ?? null, 'datetime', $appTz),
+                    ];
+                }, $value), JSON_THROW_ON_ERROR);
             }
         );
     }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
             'date' => 'date',
             'datetime' => 'datetime',
-            'list' => 'array',
         ];
     }
 }
