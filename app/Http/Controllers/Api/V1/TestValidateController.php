@@ -5,14 +5,19 @@ namespace App\Http\Controllers\Api\V1;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Maksde\Support\Contracts\Validation\DateTimeValidate;
+use Maksde\Support\Contracts\Validation\DateValidate;
 use Maksde\Support\Contracts\Validation\EmailValidate;
+use Maksde\Support\Contracts\Validation\PhoneInternationalValidate;
+use Maksde\Support\Contracts\Validation\PhoneValidate;
+use Maksde\Support\Contracts\Validation\TimeValidate;
 
 class TestValidateController
 {
     public function email(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
+            $request->validate([
                 'email' => ['required', new EmailValidate],
             ]);
         } catch (ValidationException $validationException) {
@@ -30,8 +35,8 @@ class TestValidateController
     public function phone(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
-                'phone' => 'required|'.config('support.validate.format.phone'),
+            $request->validate([
+                'phone' => ['required', new PhoneValidate],
             ]);
         } catch (ValidationException $validationException) {
             return response()->json([
@@ -48,8 +53,8 @@ class TestValidateController
     public function phoneInternational(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
-                'phone' => 'required|'.config('support.validate.format.phone_international'),
+            $request->validate([
+                'phone' => ['required', new PhoneInternationalValidate],
             ]);
         } catch (ValidationException $validationException) {
             return response()->json([
@@ -66,8 +71,8 @@ class TestValidateController
     public function date(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
-                'date' => 'required|'.config('support.validate.format.date'),
+            $request->validate([
+                'date' => ['required', new DateValidate],
             ]);
         } catch (ValidationException $validationException) {
             return response()->json([
@@ -84,8 +89,8 @@ class TestValidateController
     public function time(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
-                'time' => 'required|'.config('support.validate.format.time'),
+            $request->validate([
+                'time' => ['required', new TimeValidate],
             ]);
         } catch (ValidationException $validationException) {
             return response()->json([
@@ -102,8 +107,8 @@ class TestValidateController
     public function timestamp(Request $request): JsonResponse
     {
         try {
-            $validated = $request->validate([
-                'datetime' => 'required|'.config('support.validate.format.datetime'),
+            $request->validate([
+                'datetime' => ['required', new DateTimeValidate],
             ]);
         } catch (ValidationException $validationException) {
             return response()->json([

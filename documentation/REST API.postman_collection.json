@@ -1,0 +1,331 @@
+{
+  "info": {
+    "_postman_id": "42b48bda-082a-4e75-8b3d-1626b7a058db",
+    "name": "REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43277729"
+  },
+  "item": [
+    {
+      "name": "Обратная связь",
+      "item": [
+        {
+          "name": "Получить все записи",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/callback/",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "callback",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "per_page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": []
+        },
+        {
+          "name": "Создать новую запись",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Name",
+                  "type": "text",
+                  "uuid": "be854909-50b9-4ac5-947c-ae356427fd46"
+                },
+                {
+                  "key": "phone",
+                  "value": "+71234567890",
+                  "type": "text",
+                  "uuid": "4cdcfab5-2cd6-4e7c-8a0c-c846a47734d3"
+                },
+                {
+                  "key": "email",
+                  "value": "цук@wef.рф",
+                  "type": "text",
+                  "uuid": "6def0edc-9d3b-42b9-bbb6-7cb428dcda0a"
+                },
+                {
+                  "key": "date",
+                  "value": "2025-12-31",
+                  "type": "text",
+                  "uuid": "9f7ac1fb-abfa-4455-86c6-29ab2da13214"
+                },
+                {
+                  "key": "time",
+                  "value": "23:55:10",
+                  "type": "text",
+                  "uuid": "f685e5d6-49ba-416d-802e-dcd9c45fc22e"
+                },
+                {
+                  "key": "datetime",
+                  "value": "2020-06-06 12:30:30",
+                  "type": "text",
+                  "uuid": "ca3b0005-4b13-4345-ab94-e71550d17a3e"
+                },
+                {
+                  "key": "list[0][date]",
+                  "value": "2025-12-31",
+                  "type": "text",
+                  "uuid": "d61b8add-9e6e-4c3b-be13-ac232e3a11b2"
+                },
+                {
+                  "key": "list[0][time]",
+                  "value": "23:55:10",
+                  "type": "text",
+                  "uuid": "aca796aa-17db-4b27-8260-40e2c8e6d441"
+                },
+                {
+                  "key": "list[1][datetime]",
+                  "value": "2020-06-06 12:30:30",
+                  "type": "text",
+                  "uuid": "405c2fc0-8789-4304-b06c-1b26b000f2e8"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/callback",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "callback"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Получить одну запись",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/callback/27",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "callback",
+                "27"
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": []
+        },
+        {
+          "name": "Обновить запись",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "f175275f-0db7-4e22-9366-3023d990b49b"
+                },
+                {
+                  "key": "name",
+                  "value": "Name 1",
+                  "type": "text",
+                  "uuid": "be854909-50b9-4ac5-947c-ae356427fd46"
+                },
+                {
+                  "key": "phone",
+                  "value": "+71234567811",
+                  "type": "text",
+                  "uuid": "4cdcfab5-2cd6-4e7c-8a0c-c846a47734d3",
+                  "disabled": true
+                },
+                {
+                  "key": "email",
+                  "value": "цук@wef.рф",
+                  "type": "text",
+                  "uuid": "6def0edc-9d3b-42b9-bbb6-7cb428dcda0a",
+                  "disabled": true
+                },
+                {
+                  "key": "date",
+                  "value": "2025-12-31",
+                  "type": "text",
+                  "uuid": "9f7ac1fb-abfa-4455-86c6-29ab2da13214",
+                  "disabled": true
+                },
+                {
+                  "key": "time",
+                  "value": "23:55:10",
+                  "type": "text",
+                  "uuid": "f685e5d6-49ba-416d-802e-dcd9c45fc22e",
+                  "disabled": true
+                },
+                {
+                  "key": "datetime",
+                  "value": "2020-06-06 12:30:30",
+                  "type": "text",
+                  "uuid": "ca3b0005-4b13-4345-ab94-e71550d17a3e"
+                },
+                {
+                  "key": "list[0][date]",
+                  "value": "2025-12-31",
+                  "type": "text",
+                  "uuid": "d61b8add-9e6e-4c3b-be13-ac232e3a11b2"
+                },
+                {
+                  "key": "list[0][time]",
+                  "value": "23:55:10",
+                  "type": "text",
+                  "uuid": "aca796aa-17db-4b27-8260-40e2c8e6d441"
+                },
+                {
+                  "key": "list[1][datetime]",
+                  "value": "2020-06-06 12:30:30",
+                  "type": "text",
+                  "uuid": "405c2fc0-8789-4304-b06c-1b26b000f2e8"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/callback/3",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "callback",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Удалить запись",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful DELETE request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/callback/12",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "callback",
+                "12"
+              ]
+            },
+            "description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://tests.test/api/v1"
+    }
+  ]
+}

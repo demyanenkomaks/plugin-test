@@ -23,12 +23,14 @@
 7. Создать символическую ссылку хранилища: `php artisan storage:link`
 8. Создать пользователя Filament: `php artisan make:filament-user`
 
-composer cache // очищает и создает новый кеш для laravel и filament
-```
+Для пересоздания кеша Laravel и Filament: `composer cache`.
 
+## Документация
 
-## Postman коллекция для проверки:
+В папке **`documentation/`** лежат Postman-коллекции для проверки API:
 
-```
-Test_validate.postman_collection.json
-```
+- `Test validate.postman_collection.json` — тесты валидации (телефон, дата, время, даты и время)
+- `REST API.postman_collection.json` — запросы REST API для Обратной связи, тест сохранения и вывода данных (дата, время, даты и время)
+- `Email Validation - Extended Test Cases.postman_collection.json` — расширенные кейсы валидации email
+
+Импортируйте нужную коллекцию в Postman и при необходимости задайте переменные окружения (например, базовый URL).
