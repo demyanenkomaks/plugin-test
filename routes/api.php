@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Http\Controllers\Api\V1\CallbackController;
 use App\Http\Controllers\Api\V1\TestValidateController;
 use App\Http\Middleware\ForceJsonResponse;

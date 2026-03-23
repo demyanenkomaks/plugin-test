@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources\Callbacks\Schemas;
 
 use Filament\Forms;
 use Filament\Schemas\Schema;
-use Maksde\Helpers\Filament\Resources\Schemas;
+use Maksde\Helpers\Filament\Resources\Schemas\Forms as Schemas;
 use Maksde\Support\Contracts\Validation\EmailValidate;
 
 class CallbackForm

@@ -3,7 +3,7 @@ includes:
     - vendor/nesbot/carbon/extension.neon
 
 parameters:
-    level: 5
+    level: 6
 
     paths:
         - app/
@@ -15,5 +15,8 @@ parameters:
         - resources/
         - routes/
         - tests/
-#        - vendor/maksde/helpers
-#        - vendor/maksde/support
+
+    reportUnmatchedIgnoredErrors: true
+    treatPhpDocTypesAsCertain: false
+
+    ignoreErrors:

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
@@ -18,7 +20,7 @@ class CallbackRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, ValidationRule|array|string>
+     * @return array<string, array<int, ValidationRule|string>>
      */
     public function rules(): array
     {
@@ -55,7 +57,7 @@ class CallbackRequest extends FormRequest
     //        ];
     //    }
 
-    protected function failedValidation(Validator $validator): array
+    protected function failedValidation(Validator $validator): void
     {
         throw new HttpResponseException(response()->json([
             'errors' => $validator->errors(),

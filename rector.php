@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
+use Rector\ValueObject\PhpVersion;
 use RectorLaravel\Set\LaravelLevelSetList;
 
 return RectorConfig::configure()
@@ -16,18 +17,14 @@ return RectorConfig::configure()
         __DIR__.'/resources',
         __DIR__.'/routes',
         __DIR__.'/tests',
-        //        __DIR__.'/vendor/maksde/helpers',
-        //        __DIR__.'/vendor/maksde/support',
     ])
     ->withSkip([
         __DIR__.'/bootstrap/cache',
     ])
+    ->withPhpVersion(PhpVersion::PHP_84)
     ->withSets([
         LaravelLevelSetList::UP_TO_LARAVEL_120,
     ])
-//    ->withPHPStanConfigs([
-//        __DIR__.'/phpstan.neon.dist',
-//    ])
     ->withCodingStyleLevel(10)
     ->withTypeCoverageLevel(10)
     ->withDeadCodeLevel(10)

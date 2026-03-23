@@ -1,8 +1,4 @@
 ---
-alwaysApply: true
----
-
----
 name: comprehensive-laravel-php
 description: This is a new rule
 ---
@@ -19,12 +15,13 @@ description: This is a new rule
 
   Dependencies
   - Composer for dependency management
-  - PHP 8.4
-  - Laravel 12
-  - Filament 5
+  - PHP 8.4+
+  - Laravel 12.0+
+  - Filament 5.0+
 
   PHP and Laravel Standards
-  - Leverage PHP 8.4+ features when appropriate (e.g., typed properties, match expressions).
+  - Leverage PHP 8.4 features when appropriate (e.g., typed properties, match expressions).
+  - Always use strict typing: declare(strict_types=1);
   - Adhere to PSR-12 coding standards for consistent code style.
   - Utilize Laravel's built-in features and helpers to maximize efficiency.
   - Follow Laravel's directory structure and file naming conventions.
@@ -95,3 +92,4 @@ description: This is a new rule
   - Implement API versioning for maintainability and backward compatibility.
   - Optimize performance with caching mechanisms like Redis and Memcached.
   - Ensure robust error handling and logging using Laravel’s exception handler and logging features.
+

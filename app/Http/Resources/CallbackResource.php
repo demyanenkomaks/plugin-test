@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Resources;
 
 use App\Models\Callback;
@@ -22,12 +24,12 @@ class CallbackResource extends JsonResource
             'name' => $this->name,
             'phone' => $this->phone,
             'email' => $this->email,
-            'date' => TemporalFormat::forOutput($this->date, 'date'),
+            'date' => TemporalFormat::forOutput($this->date?->format('Y-m-d'), 'date'),
             'time' => TemporalFormat::forOutput($this->time, 'time'),
-            'datetime' => TemporalFormat::forOutput($this->datetime, 'datetime'),
+            'datetime' => TemporalFormat::forOutput($this->datetime?->format('Y-m-d H:i:s'), 'datetime'),
             'list' => $this->formatListForApi($this->list),
-            'created_at' => TemporalFormat::forOutput($this->created_at, 'datetime'),
-            'updated_at' => TemporalFormat::forOutput($this->updated_at, 'datetime'),
+            'created_at' => TemporalFormat::forOutput($this->created_at->format('Y-m-d H:i:s'), 'datetime'),
+            'updated_at' => TemporalFormat::forOutput($this->updated_at->format('Y-m-d H:i:s'), 'datetime'),
         ];
     }
 

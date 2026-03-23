@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -18,12 +20,13 @@ use Maksde\Support\Formation\TemporalFormat;
  * @property Carbon|null $date Дата
  * @property string|null $time Время
  * @property Carbon|null $datetime Дата и время
- * @property array|null $list Список дат в формате JSON
+ * @property array<int, array{date: string|null, time: string|null, datetime: string|null}>|null $list Список дат в формате JSON
  * @property Carbon $created_at Дата создания записи
  * @property Carbon $updated_at Дата обновления записи
  */
 class Callback extends Model
 {
+    /** @use HasFactory<\Database\Factories\CallbackFactory> */
     use HasFactory;
 
     protected $fillable = [
@@ -40,6 +43,8 @@ class Callback extends Model
 
     /**
      * Мутатор для поля list.
+     *
+     * @return Attribute<array<int, array{date: string|null, time: string|null, datetime: string|null}>|null, string|null>
      */
     protected function list(): Attribute
     {
